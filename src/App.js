@@ -34,11 +34,9 @@ function App() {
   return (
     <div className="App">
       {(typeof data.current !== 'undefined') ? (
-        <Weather data={data} />
+        <Weather data={data} lat={lat} long={long} />
       ) : (
         <h1>Loading...
-          {console.log(data.timezone)}
-          {console.log(data.current)}
         </h1>
       )}
     </div>
