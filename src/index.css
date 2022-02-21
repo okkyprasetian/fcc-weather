@@ -58,18 +58,13 @@ code {
   color: #EEEEEE;
 }
 
-.top button {
-  background-color: inherit;
-  border: none;
-}
-
 .refresh {
   font-size: 3rem;
   transition: 500ms all ease;
   cursor: pointer;
 }
 
-.top button:hover {
+.refresh:hover {
   color: #212121;
 }
 
