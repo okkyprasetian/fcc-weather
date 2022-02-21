@@ -5,7 +5,7 @@ function Weather({ data }) {
             <p>Temperature: {data.current.temp}</p>
             <p>Sunrise: {data.current.sunrise}</p>
             <p>Sunset: {data.current.sunset}</p>
-            <p>Description: {data.weather[0].main}</p>
+            <p>Description: {data.current.weather[0].main}</p>
         </div>
     );
 }

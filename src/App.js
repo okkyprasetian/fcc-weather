@@ -33,10 +33,13 @@ function App() {
 
   return (
     <div className="App">
-      {(typeof data == 'und') ? (
+      {(typeof data.current !== 'undefined') ? (
         <Weather data={data} />
       ) : (
-        <h1>Loading...</h1>
+        <h1>Loading...
+          {console.log(data.timezone)}
+          {console.log(data.current)}
+        </h1>
       )}
     </div>
   );
