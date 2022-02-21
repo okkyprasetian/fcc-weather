@@ -3,7 +3,7 @@
 /* ===== GLOBAL ===== */
 
 :root {
-  font-size: 15px;
+  font-size: 18px;
 }
 
 * {
@@ -33,30 +33,57 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #EEEEEE;
 }
 
 .card {
   position: relative;
   width: 50%;
   height: 70%;
-  border: 2px solid;
-  border-radius: 1rem;
+  border: 5px solid #212121;
+  border-radius: 1.3rem;
 }
 
 .top {
-  border: solid 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 20%;
+  border: solid 1px #212121;
   border-radius: 1rem 1rem 0 0;
-  border-bottom: solid 3px;
-  font-size: 1.5rem;
+  border-bottom: solid 4px #212121;
+  font-size: 1.7rem;
   padding: 0.5rem 1rem;
+  background-color: #0D7377;
+  color: #EEEEEE;
+}
+
+.top button {
+  background-color: inherit;
+  border: none;
+}
+
+.refresh {
+  font-size: 3rem;
+  transition: 500ms all ease;
+  cursor: pointer;
+}
+
+.top button:hover {
+  color: #212121;
 }
 
 .content {
+  height: 80%;
   padding: 1rem 2rem;
+  border-radius: 0 0 1rem 1rem;
+  color: #212121;
+  background-color: #32E0C4;
 }
 
 .content-top {
   font-size: 1.1rem;
+  margin-bottom: 1rem;
 }
 
 .content-top h3 {
@@ -67,15 +94,30 @@ code {
   margin: 0.3rem 0;
 }
 
+.content-mid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
 .content-mid p {
   display: flex;
   align-items: center;
-  margin-bottom: 2rem;
+  justify-content: center;
+  border-bottom: solid 2px #EEEEEE;
+  letter-spacing: 0.1rem;
+  font-size: 1.1rem;
+  text-transform: capitalize;
 }
 
 .content-bot {
   display: flex;
   width: 100%;
+}
+
+.content-bot p {
+  margin: 0.3rem 0;
 }
 
 .left {
@@ -86,6 +128,7 @@ code {
   position: absolute;
   bottom: 0;
   left: 0;
-  margin-left: 1rem;
+  margin-left: 0.8rem;
   margin-bottom: 0.5rem;
+  font-size: 0.8rem;
 }

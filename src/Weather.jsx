@@ -1,3 +1,5 @@
+import { HiRefresh } from 'react-icons/hi'
+
 function Weather({ data, lat, long }) {
 
     const temp = (data.current.temp - 273.15).toFixed(2)
@@ -6,15 +8,18 @@ function Weather({ data, lat, long }) {
     const humidity = data.current.humidity
     const uvi = data.current.uvi
     const windspeed = data.current.wind_speed
-
     const icon = data.current.weather[0].icon
     const weather = data.current.weather[0].description
+    const refresh = () => {
+        window.location.reload()
+    }
 
     return (
         <div className="card">
 
             <div className="top">
                 <h1>Weather App</h1>
+                <HiRefresh className='refresh' onClick={refresh} />
             </div>
 
             <div className="content">
@@ -31,19 +36,19 @@ function Weather({ data, lat, long }) {
                 <div className="content-bot">
                     <div className="left">
                         <p>Temperature: {temp} &deg;C </p>
-                        <p>uvi: {uvi}</p>
+                        <p>UVI Level: {uvi}</p>
                         <p>Sunrise: {sunrise}</p>
                     </div>
                     <div className="right">
                         <p>Humidity: {humidity}%</p>
-                        <p>wind speed: {windspeed} meter/sec</p>
+                        <p>Wind Speed: {windspeed} Meter/Sec</p>
                         <p>Sunset: {sunset}</p>
                     </div>
                 </div>
 
-            </div>
-            <div className="timezone">
-                Timezone: {data.timezone}
+                <div className="timezone">
+                    Timezone: {data.timezone}
+                </div>
             </div>
 
         </div>
